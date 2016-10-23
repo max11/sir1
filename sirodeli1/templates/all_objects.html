@@ -1,0 +1,14 @@
+{% extends 'base.html' %}
+
+{% block univers %}
+
+{% for one in all %}
+    <div class="col-md-4">
+        <h2><a href="{% url 'sirodeli1name:post_details' one.pk %}">{{ one.name }}</a></h2>
+        {{ one.text|safe }}
+        <p><a class="btn btn-default" href="#" role="button">{{ one.author }}</a></p>
+    </div>
+
+{% endfor %}
+
+{% endblock %}

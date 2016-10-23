@@ -1,0 +1,10 @@
+{% extends 'base.html' %}
+
+{% block univers %}
+
+ <h1>Одна запись</h1> <br><a href="{% url 'sirodeli1name:post_del' post.pk %}">удалить</a><br><br>
+
+{{ post.name }}<br>
+{{ post.text|safe }}<br>
+    <br>
+{% endblock %}

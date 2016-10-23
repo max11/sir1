@@ -1,0 +1,12 @@
+{% extends 'base.html' %}
+
+{% block univers %}
+
+{% if username %}
+        <a href="/user/logout/"><span class="glyphicon glyphicon-log-in"></span> Выйти ( {{ username }} )</a>
+      {% else %}
+        <a href="/user/login/"><span class="glyphicon glyphicon-user"></span> Войти</a>
+{% endif %}
+
+
+{% endblock %}
